@@ -12,7 +12,7 @@ namespace parameters {
 
 const uint64_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
-const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
+const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 10000000000;
 //Currency-specific address prefix
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2;
 //Choose maturity period for your currency
@@ -108,6 +108,7 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1
 const std::initializer_list<const char*> SEED_NODES = {
   "18.196.27.41:19082",
   "35.156.137.44:19082",
+  "35.177.174.67:19082",
 };
 
 struct CheckpointData {
@@ -121,9 +122,10 @@ __attribute__((unused))
 
 // You may add here other checkpoints using the following format:
 // {<block height>, "<block hash>"},
-const std::initializer_list<CheckpointData> CHECKPOINTS = {
-  //{ 10000, "84b6345731e2702cdaadc6ce5e5238c4ca5ecf48e3447136b2ed829b8a95f3ad" },
+const std::initializer_list<CheckpointData> CHECKPOINTS = { 
+	{1919, "2683bd0e3439f95816aa51204b2d03f7e45c09b07b5b884fd9463939a722fb48"}
 };
+
 } // CryptoNote
 
 #define ALLOW_DEBUG_COMMANDS
