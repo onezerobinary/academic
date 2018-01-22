@@ -39,7 +39,7 @@ const uint64_t MINIMUM_FEE                                   = 100000;
 const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
 
 // Define preferred block's target time
-const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 240; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 //There are options to tune CryptoNote's difficulty retargeting function.
 //We recommend not to change it.
@@ -74,7 +74,7 @@ const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json"
 
 //Put here the name of your currency
 const char     CRYPTONOTE_NAME[]                             = "academic";
-const char     GENESIS_COINBASE_TX_HEX[]                     = "013c01ff0001ffffffffffff0f029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101dd7fbf0e8f5678167255bedad03345c1e8f11cc878a133e6a68f92e21faa0b0d";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 
 const uint8_t  CURRENT_TRANSACTION_VERSION                   =  1;
 const uint8_t  BLOCK_MAJOR_VERSION_1                         =  1;
@@ -102,7 +102,7 @@ const uint32_t P2P_DEFAULT_CONNECTION_TIMEOUT                = 5000;          //
 const uint32_t P2P_DEFAULT_PING_CONNECTION_TIMEOUT           = 2000;          // 2 seconds
 const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; // 2 minutes
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
-const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
+const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
 //Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
@@ -122,8 +122,8 @@ __attribute__((unused))
 
 // You may add here other checkpoints using the following format:
 // {<block height>, "<block hash>"},
-const std::initializer_list<CheckpointData> CHECKPOINTS = { 
-	{1919, "2683bd0e3439f95816aa51204b2d03f7e45c09b07b5b884fd9463939a722fb48"}
+const std::initializer_list<CheckpointData> CHECKPOINTS = {
+	// {1919, "2683bd0e3439f95816aa51204b2d03f7e45c09b07b5b884fd9463939a722fb48"}
 };
 
 } // CryptoNote
